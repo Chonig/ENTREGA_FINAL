@@ -7,6 +7,7 @@ from .models import *
 def inicio(request):
 
     return render( request, "AppCoder/index.html")
+    
 
 
 def mostrar_nombre (request):
@@ -14,6 +15,16 @@ def mostrar_nombre (request):
     context = {"nombre": Persona.objects.all(), "apellido": Persona.objects.all()}
 
     return render ( request, "AppCoder/mostrar_personas.html", context)
+
+
+
+def mostrar_contacto (request):
+    pass
+
+
+
+def mostrar_info(request):
+    pass
 
 
 

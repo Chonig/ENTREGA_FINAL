@@ -19,6 +19,6 @@ from AppCoder.views import mostrar_nombre,inicio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('saludar/', mostrar_nombre ),
+    path('listar_nombres/', mostrar_nombre ),
     path('inicio/', inicio),
 ]

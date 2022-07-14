@@ -1,13 +1,15 @@
 from multiprocessing import context
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import *
+from AppCoder.views import *
+from AppCoder.models import Persona
+
 
 
 
 def inicio(request):
 
-    return render( request, "AppCoder/index.html")
+    return render( request, "AppCoder/index.html",{})
     
 
 

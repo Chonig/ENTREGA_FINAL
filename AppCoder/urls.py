@@ -1,5 +1,5 @@
 from django.urls import path
-from AppCoder.views import *
+from AppCoder.views import mostrar_nombre,inicio
 
 urlpatterns = [
     

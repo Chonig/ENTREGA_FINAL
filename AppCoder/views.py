@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from .models import *
 
 
+
 def inicio(request):
 
     return render( request, "AppCoder/index.html")

@@ -1,0 +1,20 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static%}
+
+{% block cuerpo %}
+
+    {% for datos in info %}
+    <ul>
+        
+            <h4>
+                <br> Producto :{{datos.producto}},
+                <br> Valor : {{datos.precio}},
+                <br> Cantidad :{{datos.cantidad}},
+            </h4>
+        
+    </ul>  
+    {% endfor %}     
+
+
+{% endblock %}

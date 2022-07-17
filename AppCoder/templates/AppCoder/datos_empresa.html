@@ -1,0 +1,21 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static%}
+
+{% block cuerpo %}
+
+    {% for datos in info %}
+    <ul>
+        <li>
+            <h4>
+                <br> Nombre de la empresa :{{datos.empresa}},
+                <br> Dirección : {{datos.calle}},
+                <br> Altura :{{datos.altura}},
+                <br> Empleados Registrados : {{datos.cant_empleados}}
+            </h4>
+        </li>
+    </ul>  
+    {% endfor %}     
+
+
+{% endblock %}

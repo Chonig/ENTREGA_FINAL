@@ -1,0 +1,39 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static%}
+
+{% block cuerpo %}
+
+
+<h4> Busqeda de Persona :</h4>
+
+{% if busqueda_formulario %}
+
+    <form action="" method="GET">
+
+       {{busqueda_formulario}}
+        
+       <button type="submit" > Buscar </button>
+
+    </form>
+
+{% else %}
+
+   
+    {% if personas %}
+        <ul> 
+        {% for x in personas %}
+
+        <li>{{x.nombre}}</li>
+            
+        {% endfor%}
+        </ul>  
+    {% else %}
+            
+        <h4>No Hay personas con ese criterio!!</h4>
+   
+    {% endif %}
+        
+         
+{% endif %}
+{% endblock %}

@@ -1,0 +1,53 @@
+body{
+    font-family: arial, helvetica;
+    background: #85998c;
+    text-align: center;
+}
+
+.menu{
+    list-style: none ;
+    padding: 0;
+    background: #092327;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+
+}
+
+.menu li a:hover{
+    background: #ef8354;
+}
+
+
+
+
+footer{
+    max-width: 1000px;
+    padding: 30px;
+    background: #092327;
+    margin: auto;
+    border-radius: 0 0 20px 20px;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica;
+    font-size: 18px;
+}
+
+footer a:hover{
+    color: rgb(242, 241, 240);
+    background: #ef8354;
+}

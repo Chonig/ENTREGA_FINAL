@@ -1,10 +1,6 @@
 from django.contrib import admin
-from .models import *
+from AppCoder.models import *
 
 admin.site.register(Persona)
-admin.site.register(Contacto)
-admin.site.register(Info_Adicional)
-
-
-
-# Register your models here.
+admin.site.register(Articulo)
+admin.site.register(Datos)

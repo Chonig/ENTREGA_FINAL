@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrega Final</title>
-</head>
-<body>
+{% extends 'AppCoder/padre.html' %}
+
+{% load static%}
+
+{% block cuerpo %}
+
     {% for personas in nombre %}
 
-        <li>{{personas.nombre}},{{personas.apellido}}</li>
+    <ul>
+        <h4> 
+            {{personas.nombre}}
+            {{personas.apellido}}
+            {{personas.edad}}
+        </h4>
+    </ul>
 
     {% endfor %}
 
 
-
-</body>
-
-</html>
+{% endblock %}

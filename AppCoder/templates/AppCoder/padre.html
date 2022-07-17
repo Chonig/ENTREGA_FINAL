@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% block title %}
 
-        </title><title>Entrega Final</title>
-        
-    {% endblock %}
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>*Entrega Final - Cristian Hönig*</title>
 
+  {% load static %}
 
+  <link href="{% static 'AppCoder/styles.css' %}" rel="stylesheet">
    
+</head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <ul class="nav nav-pills">
+  
+        <li role="presentation" class="active"><a href="{%url 'inicio' %}">Inicio</a></li>
+        <li role="presentation"><a href="{%url 'formulario' %}">Formulario Web</a></li>
+        <li role="presentation"><a href="{%url 'mostrar-personas' %}">Lista de Personas</a></li>
+        <li role="presentation"><a href="{%url 'datos-empresa' %}">Datos de Empresas</a></li>
+        <li role="presentation"><a href="{%url 'busquedapersona' %}">Búsqueda</a></li>
+        <li role="presentation"><a href="{%url 'mostrar-articulos' %}">Lista de Productos</a></li>
+        <li role="presentation"><a href="{%url 'contacto' %}">Contacto</a></li>
 
-</body>
+        </ul>
+      </ul>
+    </nav>
 
+
+{% block cuerpo %}
+{% endblock %}
+
+
+<footer>
+
+  Cristian Hönig<br>
+  Primera Entrega Final<br>
+  <a href="https://coderhouse.com">Coder House</a>
+
+</footer>
+
+ 
+  </body>
 </html>

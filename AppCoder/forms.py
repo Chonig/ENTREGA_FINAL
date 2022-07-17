@@ -1,11 +1,26 @@
-from django.forms import forms
+from django import forms
 
 
-class FormularioReserva (forms.form):
+class FormularioReserva (forms.Form):
 
     nombre = forms.CharField(max_length=40)
     apellido = forms.CharField(max_length=40)
+    edad = forms.IntegerField()
+
+
+class BusquedaPersona (forms.Form):
+
+    criterio = forms.CharField()
+
+
+class FormularioContacto (forms.Form):
+    
+    nombre = forms.CharField(max_length=40)
+    apellido = forms.CharField(max_length=40)
     email = forms.EmailField()
-    fecha = forms.DateField()
-    cant_personas = forms.IntegerField()
-    hora_reserva = forms.TimeField()
+    telefono = forms.IntegerField()
+
+
+
+
+

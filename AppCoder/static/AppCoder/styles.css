@@ -1,6 +1,6 @@
 body{
     font-family: arial, helvetica;
-    background: #85998c;
+    background: #979595;
     text-align: center;
 }
 
@@ -50,4 +50,16 @@ footer{
 footer a:hover{
     color: rgb(242, 241, 240);
     background: #ef8354;
+}
+
+
+.container{
+    height: 50vh;
+    margin: 5%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
 }

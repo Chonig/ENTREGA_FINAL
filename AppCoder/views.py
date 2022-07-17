@@ -77,9 +77,13 @@ def formulario_busqueda(request):
     busqueda_formulario = BusquedaPersona()
 
     if request.GET:
-    
-        personas = Persona.objects.filter(nombre=busqueda_formulario["criterio"]).all()
-        return render(request, "AppCoder/busqueda_persona.html", {"personas" : personas})
+
+        busqueda_formulario = BusquedaPersona(request.GET)
+
+        if busqueda_formulario.is_valid():
+
+            personas = Persona.objects.filter(nombre=busqueda_formulario.cleaned_data.get("criterio")).all()
+            return render(request, "AppCoder/busqueda_persona.html", {"busqueda_formulario": busqueda_formulario, "personas": personas})
 
 
     return render(request ,"AppCoder/busqueda_persona.html",{"busqueda_formulario": busqueda_formulario})

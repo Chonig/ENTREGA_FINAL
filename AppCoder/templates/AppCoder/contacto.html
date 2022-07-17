@@ -8,15 +8,18 @@
 <form action="" method = "POST"> 
         
     {% csrf_token %}
-    
+<div class="container">    
     <table>
 
         {{contacto.as_table}}
 
     </table>
+</div>
    
     <input type ="submit", value= "Enviar">
 
 </form>
+
+
 
 {% endblock %}

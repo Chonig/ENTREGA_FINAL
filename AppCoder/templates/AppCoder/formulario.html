@@ -2,23 +2,20 @@
 
 {% load static%}
 
-{% block cuerpo %}
-        
+{% block cuerpo %}   
 
-
-<form action="" method = "POST"> 
+    <form action="" method = "POST"> 
         
         {% csrf_token %}
-        
+    <div class="container">
         <table>
-
+           
             {{formulario.as_table}}
 
         </table>
-       
+    </div>
         <input type ="submit", value= "Enviar">
+    </form>
 
-</form>
-
-
+  
 {% endblock %}

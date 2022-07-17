@@ -5,6 +5,7 @@
 {% block cuerpo %}
 
     {% for datos in info %}
+<div class="container">   
     <ul>
         
             <h4>
@@ -12,8 +13,9 @@
                 <br> Valor : {{datos.precio}},
                 <br> Cantidad :{{datos.cantidad}},
             </h4>
-        
+       
     </ul>  
+</div>
     {% endfor %}     
 
 

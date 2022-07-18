@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 
@@ -20,7 +21,7 @@ class Articulo (models.Model):
     cantidad = models.IntegerField()
 
     def __str__(self):
-        return f"{self.producto} { self.precio} {self.cantidad}"
+        return f"{self.producto}"
 
 
 class Datos (models.Model):
@@ -31,7 +32,7 @@ class Datos (models.Model):
     cant_empleados = models.IntegerField()
 
     def __str__(self):
-        return f"{self.empresa} { self.calle} {self.altura} {self.cant_empleados}"
+        return f"{self.empresa}"
 
 
 class Contacto (models.Model):
@@ -42,4 +43,15 @@ class Contacto (models.Model):
     telefono = models.IntegerField()
 
     def __str__(self):
-        return f"{self.nombre} { self.apellido} {self.email} {self.telefono}"
+        return f"{self.nombre} { self.apellido}"
+
+
+
+class Avatar(models.Model):
+    user = models.ForeignKey(User,on_delete=models.DO_NOTHING)
+    avatar = models.ImageField(upload_to= "avatars", null= True, blank= True)
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_upgrade = models.DateField(auto_now=True)
+
+    def __str__ (self):
+        return f"{self.user.username}"

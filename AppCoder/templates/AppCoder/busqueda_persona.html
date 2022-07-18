@@ -11,28 +11,30 @@
 
     <form action="" method="GET">
 
+        {% csrf_token %}
+ 
        {{busqueda_formulario}}
         
        <button type="submit" > Buscar </button>
 
     </form>
 
-{% else %}
+
 
    
-    {% if personas %}
+{% if personas %}
         <ul> 
-        {% for x in personas %}
+    {% for x in personas %}
 
-        <li>{{x.nombre}}</li>
+    <li>{{x.nombre}}</li>
             
-        {% endfor%}
+    {% endfor%}
         </ul>  
-    {% else %}
+{% else %}
             
-        <h4>No Hay personas con ese criterio!!</h4>
+    <h4>No Hay personas con ese criterio!!</h4>
    
-    {% endif %}
+{% endif %}
         
          
 {% endif %}
